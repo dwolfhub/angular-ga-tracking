@@ -26,5 +26,5 @@ When the directive is used, it registers a page view at the current $location.pa
 When you add the diretive to an HTML element and that element is clicked, the event will be registered with GA.
 
 ```html
-<a href="/#/prizes" ga-event event-name="some event" event-value="some value" profile-id="XX-XXXXXXXX-XX">View Prizes</a>
+<a href="/#/prizes" ga-event event-name="some event" event-value="some value" tracking-id="XX-XXXXXXXX-XX">View Prizes</a>
 ```
