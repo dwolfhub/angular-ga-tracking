@@ -13,11 +13,11 @@ angular.module('ga.tracker', [])
       scope: {
         eventName: "@",
         eventValue: "@",
-        profileId: "@"
+        trackingId: "@"
       },
       link: function(scope, element, attrs) {
         element.bind('click',function(){
-          _gaq.push(['_setAccount', scope.profileId]);
+          _gaq.push(['_setAccount', scope.trackingId]);
           _gaq.push(['_trackEvent', scope.eventName, scope.eventValue,,, false]);
         });
       }
@@ -27,10 +27,10 @@ angular.module('ga.tracker', [])
     return {
       restrict: 'A',
       scope: {
-        profileId: "@"
+        trackingId: "@"
       },
       link: function(scope, element, attrs) {
-        _gaq.push(['_setAccount', scope.profileId]);
+        _gaq.push(['_setAccount', scope.trackingId]);
         _gaq.push(['_trackPageview', $location.path()]);
       }
     };
